@@ -61,7 +61,7 @@ var mathexam = function (){
 			case 'x': 
 				facttables[factindex] = new Array('1','2','3','4','5','6','7','8','9','10','11','12');
 				break;
-			case '÷':
+			case '/':
 				newfacttable = new Array();
 				for(var i=0; i<=12; i++){
 					newfacttable.push( i*facts[factindex] );
@@ -78,7 +78,7 @@ var mathexam = function (){
 		var lowerslice = facttables[factindex].slice(0,partnerindex);
 		var upperslice = facttables[factindex].slice(partnerindex+1);
 		facttables[factindex] = lowerslice.concat( upperslice );
-		if(operator == '÷'){
+		if(operator == '/'){
 			return new Array(partner,fact);
 		} else if (operator == '-' && ((partner*1) > (fact*1))){
 			return new Array(partner,fact);
@@ -129,7 +129,7 @@ var mathexam = function (){
 				this.text += " " + operator + " ";
 			} 
 		}
-		this.solution = (eval(this.text.replace(/÷/, '/').replace(/x/, '*')));
+		this.solution = (eval(this.text.replace(/x/, '*')));
 		this.text += " = ";
 		
 		//Methods
@@ -345,7 +345,7 @@ var mathexam = function (){
 					form.appendChild( makeelem('h2', [], 'What Type of Exercises?') );
 					setnav("pickoperator");
 					var opol = makeelem('ol', [['id','operator']],null);
-					var options = new Array('+','-','x','÷');
+					var options = new Array('+','-','x','/');
 					for(var i=0; i< options.length; i++){
 						var li = makeelem('li', [[]], null);
 						var a = makeelem('a', [['href','#' + i]], options[i]);
@@ -420,7 +420,7 @@ var mathexam = function (){
 		},
 		debug : function(){
 			numofquestions = 200;
-			operator = '÷';
+			operator = '/';
 			facts = new Array('12');
 			setstate(2);
 			
