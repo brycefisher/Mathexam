@@ -26,7 +26,7 @@ exercise would maintain its own html representatives of itself in states 2 and 3
 //Everything within return { ... } are privileged methods and properties accessible from mathexam.mymethod() or mathexam.myproperty
 var mathexam = function (){
 	//private DOM interface
-	document.write('<style type="text/css">@import url(\'support-files/mathexam.css\');</style><form id="mathexam"></form>'); //Unorthodox, but I don't have access to <head>
+	document.write('<style type="text/css">@import url(\'http://github.com/brycefisher/Mathexam/raw/master/mathexam.css\');</style><form id="mathexam"></form>'); //Unorthodox, but I don't have access to <head>
 	function $(id){ return document.getElementById(id); }
 	function txtnode(text){ return document.createTextNode(text); }
 	function setClass(obj,newclass){ try{ obj.setAttribute('class',newclass); } catch(err) { obj.setAttribute('className',newclass); } }

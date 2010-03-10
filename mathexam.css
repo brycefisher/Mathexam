@@ -1,6 +1,6 @@
 /* MathExam.css
     By Bryce Fisher, bryce.fisher@inbox.com
-	Last Updated: Feb 3, 2010
+	Last Updated: March 10, 2010
 	Styles a math quiz app for www.learn-with-math-games.com */
 
 
@@ -8,9 +8,9 @@
 #mathexam h2 {text-align:center;}
 #mathexam #operator, #mathexam #facts, #mathexam #numofquestions {list-style: none; margin: 0 0 0 37%; padding: 5px 10px 5px 15px; width: 400px; background:#9ed2aa;}
 #mathexam #paramnav {list-style:none; height:26px; margin: 0 0 0 37%; padding:0; font-size:11px; width:400px}
-#mathexam #paramnav li {width:132px; height:20px; float:left; padding:3px 0; text-align:center; background: url('../image-files/mathexam-tab.gif') no-repeat top left; margin:0 1px 0 0;}
-#mathexam #paramnav .active {background: url('../image-files/mathexam-tab-active.gif') no-repeat top left;}
-#mathexam #paramnav .active a { text-decoration: none; font-weight:bold; color: #000; cursor: pointer; }
+#mathexam #paramnav li {width:132px; height:20px; float:left; padding:3px 0; text-align:center; background: url('http://github.com/brycefisher/Mathexam/raw/master/mathexam-tab.gif') no-repeat top left; margin:0 1px 0 0;}
+#mathexam #paramnav .active {background: url('http://github.com/brycefisher/Mathexam/raw/master/mathexam-tab-active.gif') no-repeat top left;}
+#mathexam #paramnav .active a { text-decoration: none; font-weight:bold; color: #000; }
 
 #mathexam #operator {height:85px;}
 #mathexam #operator a {width: 69px; height: 69px; float: left; text-decoration: none; line-height:69px; font-size:32px; text-align: center; border:solid 1px #000; color:#000; margin:5px;}
