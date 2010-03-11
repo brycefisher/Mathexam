@@ -10,23 +10,13 @@ i would create abstract classes which each version of the exam can call on, and 
 loads on repeat visits. there would be a initializer method which activates the correct parameters for the desired
 type of exam
 
---setstate= main method of mathexam and only way to actually control the state of mathexam. it has the core switch logic
-which runs the app:
-	state: 1=set parameters / 2=enter answers / 3=correct answers
-
-----exercise=a private constructor function which would be instantiated mathexam.numberofexercises number of times
-when updating for state2. each exercise must retain its data between states 2 and 3, and be erased in state 1. Each
-exercise would maintain its own html representatives of itself in states 2 and 3. 
-
 */
-
 
 //Using the module pattern from http://yuiblog.com/blog/2007/06/12/module-pattern/. Thanks, Eric Miraglia!
 //Everything before return { ... } are private methods and properties accessible only within the mathexam module.
 //Everything within return { ... } are privileged methods and properties accessible from mathexam.mymethod() or mathexam.myproperty
 var mathexam = function (){
 	//private DOM interface
-	document.write('<style type="text/css">@import url(\'http://github.com/brycefisher/Mathexam/raw/master/mathexam.css\');</style><form id="mathexam"></form>'); //Unorthodox, but I don't have access to <head>
 	function $(id){ return document.getElementById(id); }
 	function txtnode(text){ return document.createTextNode(text); }
 	function setClass(obj,newclass){ try{ obj.setAttribute('class',newclass); } catch(err) { obj.setAttribute('className',newclass); } }
@@ -137,11 +127,9 @@ var mathexam = function (){
 			this.li = makeelem('li',[],null);
 			this.input = makeelem('input',[['name','question'],['id',this.qid],['title','Type only the number (ex: 4)'],['type','text']],null);
 			this.message = makeelem('span',[[]],null);
-			//this.p = makeelem('p',[], this.text);
 			var qidnum = this.qid.split('question');
 			qidnum = (qidnum[1]*1) + 1;
 			this.p = makeelem('p',[], null);
-			//alert(qidnum + ". " + this.text);
 			var em = makeelem('em',[], qidnum+'. ');
 			this.p.appendChild( em );
 			this.p.appendChild( txtnode(this.text) );
@@ -416,15 +404,7 @@ var mathexam = function (){
 	//This anonymous function returns an object (everything within return { ... } ) whose methods and properties become the public interface of mathexam.
 	return {
 		init : function(){
-			alert('loading interactive math game');
 			setstate(1);
-		},
-		debug : function(){
-			numofquestions = 200;
-			operator = '/';
-			facts = new Array('12');
-			setstate(2);
-			
 		}
 	}
 }(); //The parentheses here execute the anonymous function, making mathexam module ready to work right away!

@@ -6,8 +6,8 @@
 
 /* State 1 * User Selected Parameters **************************************************************************************/
 #mathexam h2 {text-align:center;}
-#mathexam #operator, #mathexam #facts, #mathexam #numofquestions {list-style: none; margin: 0 0 0 37%; padding: 5px 10px 5px 15px; width: 400px; background:#9ed2aa;}
-#mathexam #paramnav {list-style:none; height:26px; margin: 0 0 0 37%; padding:0; font-size:11px; width:400px}
+#mathexam #operator, #mathexam #facts, #mathexam #numofquestions {list-style: none; margin: 0; padding: 5px 10px 5px 15px; width: 400px; background:#9ed2aa;}
+#mathexam #paramnav {list-style:none; height:26px; margin: 0; padding:0; font-size:11px; width:400px}
 #mathexam #paramnav li {width:132px; height:20px; float:left; padding:3px 0; text-align:center; background: url('http://github.com/brycefisher/Mathexam/raw/master/mathexam-tab.gif') no-repeat top left; margin:0 1px 0 0;}
 #mathexam #paramnav .active {background: url('http://github.com/brycefisher/Mathexam/raw/master/mathexam-tab-active.gif') no-repeat top left;}
 #mathexam #paramnav .active a { text-decoration: none; font-weight:bold; color: #000; }
