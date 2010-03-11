@@ -348,6 +348,7 @@ var mathexam = function (){
 				break;
 			case 2://present the questions for the user to answer.
 				form.innerHTML = ''; //erase the old html
+				form.appendChild( makeelem('h2',[],'Practice Questions') );
 				
 				//Prepare the facttables
 				if(typeof facts != 'string'){ //make sure that facts is not set to 'random'
