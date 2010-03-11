@@ -9,7 +9,6 @@
 i would create abstract classes which each version of the exam can call on, and the file would be cached for faster
 loads on repeat visits. there would be a initializer method which activates the correct parameters for the desired
 type of exam
-
 */
 
 //Using the module pattern from http://yuiblog.com/blog/2007/06/12/module-pattern/. Thanks, Eric Miraglia!
@@ -37,7 +36,7 @@ var mathexam = function (){
 	//universal config settings for the questions
 	var questions = new Array();
 	var numofquestions = 10;
-	var operator = '+';
+	var operator = '-';
 	var facts = new Array();
 	var facttables = new Array();
 	function resetfacttable(factindex){

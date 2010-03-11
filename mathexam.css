@@ -3,7 +3,6 @@
 	Last Updated: March 10, 2010
 	Styles a math quiz app for www.learn-with-math-games.com */
 
-
 /* State 1 * User Selected Parameters **************************************************************************************/
 #mathexam h2 {text-align:center;}
 #mathexam #operator, #mathexam #facts, #mathexam #numofquestions {list-style: none; margin: 0; padding: 5px 10px 5px 15px; width: 400px; background:#9ed2aa;}
@@ -19,7 +18,7 @@
 #mathexam #facts {height:245px;}
 #mathexam #facts li {width: 69px; height: 69px; line-height:69px; text-align: center; float:left; margin: 5px; border:solid 1px #000; color:#000; font-size:150%; position: relative;}
 #mathexam #facts li:hover {background:#ddd; color:#00e; border-color: #00e;}
-#mathexam #facts input {display:none; /*position: absolute; right: 20px;*/} 
+#mathexam #facts input {display:none;} 
 #mathexam #facts label {display: block; height:100%;}
 #mathexam #facts li.selected {background: #0aa282; color:#fff;}
 #mathexam #beginbutton {clear:left; position: relative; left: 45%; top: 1em;}
@@ -30,12 +29,14 @@
 #mathexam #numofquestions li a:hover {background:#ddd; color:#00e; border-color: #00e;}
 #mathexam #numofquestions li a:visited {color: inherit;}
 
-/* State 3 * Checking the answers *****************************************************************************************/
-#mathexam .incorrect {color: red; font-weight:bold;}
-#mathexam .correct {color: green; font-weight:bold;}
+/* State 2 * Showing the questions ****************************************************************************************/
 #mathexam #questionlist li {height: 1em; position: relative; margin:0;}
 #mathexam #questionlist p {width:7em; padding-top:1px; text-align:right;}
 #mathexam #questionlist {list-style:none; padding:0;}
 #mathexam #questionlist p em {position:absolute; top:0; left:0; font-size:125%; font-weight:bold; font-style:normal; padding:0;}
 #mathexam #questionlist input {position: absolute; top:0; left: 9em; width:3em;}
 #mathexam #questionlist span {position: absolute; top:0; left: 11.5em;}
+
+/* State 3 * Checking the answers *****************************************************************************************/
+#mathexam .incorrect {color: red; font-weight:bold;}
+#mathexam .correct {color: green; font-weight:bold;}
