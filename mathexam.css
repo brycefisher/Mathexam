@@ -35,7 +35,7 @@
 #mathexam #questionlist p {width:7em; padding-top:1px; text-align:right;}
 #mathexam #questionlist {list-style:none; padding:0;}
 #mathexam #questionlist p em {position:absolute; top:0; left:0; font-size:125%; font-weight:bold; font-style:normal; padding:0;}
-#mathexam #questionlist input {position: absolute; top:0; left: 9em; width:3em;}
+#mathexam #questionlist input {position: absolute; top:0; left: 7em; width:3em;}
 #mathexam #questionlist span {position: absolute; top:0; left: 11.5em;}
 
 /* State 3 * Checking the answers *****************************************************************************************/
