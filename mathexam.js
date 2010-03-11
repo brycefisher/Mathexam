@@ -416,6 +416,7 @@ var mathexam = function (){
 	//This anonymous function returns an object (everything within return { ... } ) whose methods and properties become the public interface of mathexam.
 	return {
 		init : function(){
+			alert('loading interactive math game');
 			setstate(1);
 		},
 		debug : function(){
