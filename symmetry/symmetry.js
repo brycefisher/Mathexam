@@ -7,14 +7,11 @@ Author: Bryce Fisher, bryce.fisher@inbox.com
 	(soon available on github!)
 
 TBD:
-	+ Finish the import function for state=4
 	+ Make sure the symmetry-update function in state=4 changes shape
 	+ Create state=3 for the symmetryexercise object. It should confirm
 		the user has created a symmetrical form to the one the computer 
 		presents
 	+ Have Greg explain what parameters he wants for state=1
-	+ Ask Greg to develop some shapes for use in the game, and to email 
-		them to me.
 	+ Create a file which Greg can update to change the shapes loaded
 		by the app in state=2
 
@@ -29,12 +26,12 @@ var symmetryexercise = function(){
 	var paintstate;
 	
 	//tile images
-	var bl = "http://localhost/www.learn-with-math-games.com/image-files/bl.jpg";
-	var br = "http://localhost/www.learn-with-math-games.com/image-files/br.jpg";
-	var tl = "http://localhost/www.learn-with-math-games.com/image-files/tl.jpg";
-	var tr = "http://localhost/www.learn-with-math-games.com/image-files/tr.jpg";
-	var all = "http://localhost/www.learn-with-math-games.com/image-files/red.jpg";
-	var none = "http://localhost/www.learn-with-math-games.com/image-files/blank.jpg";
+	var bl = "http://github.com/brycefisher/Mathexam/raw/master/symmetry/bl.jpg";
+	var br = "http://github.com/brycefisher/Mathexam/raw/master/symmetry/br.jpg";
+	var tl = "http://github.com/brycefisher/Mathexam/raw/master/symmetry/tl.jpg";
+	var tr = "http://github.com/brycefisher/Mathexam/raw/master/symmetry/tr.jpg";
+	var all = "http://github.com/brycefisher/Mathexam/raw/master/symmetry/red.jpg";
+	var none = "http://github.com/brycefisher/Mathexam/raw/master/symmetry/blank.jpg";
 	var defaultpaintstate = bl;
 	var tileimages = {'bl':bl, 'br':br, 'tl':tl, 'tr':tr, 'all':all, 'none':none};
 	paintstate = defaultpaintstate;
@@ -284,8 +281,7 @@ var symmetryexercise = function(){
 						if(selectaxis.options[selectaxis.selectedIndex].value == 'horizontal'){
 							//update the shape string
 							if(shape.indexOf('horizontal') == -1){
-								shape = shape.split('vertical');
-								shape = shape.join('horizontal');
+								shape = '|symmetry:horizontal';
 							}
 							for(var i=0; i<400; i++){
 								paintstate = tiles[i].getstate(); //remember what state the tile was in.
@@ -312,6 +308,9 @@ var symmetryexercise = function(){
 									tiles[i].disable();
 								} else {
 									tiles[i].setstate(null);
+									if(paintstate!=none){ 
+										shape+=';'+i+':'+paintstate; 
+									}
 									if (((i/20) - Math.floor(i/20))*20 == 10) {
 										tiles[i].makeVerticalBorder();
 									}
@@ -488,6 +487,6 @@ var symmetryexercise = function(){
 			setstate(4);
 		}
 	};
-}(); //execute function ¡ahorita!
+}(); //execute function Â¡ahorita!
 
 Core.start( symmetryexercise );
