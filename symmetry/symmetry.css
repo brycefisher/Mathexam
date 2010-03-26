@@ -1,0 +1,10 @@
+#symmetry {margin:0; padding:0;}
+#grid {border: inset 3px #000; margin: 2em 0; width: 500px; height: 500px; line-height: auto; clear:left;}
+#controlbar {list-style:none; margin:0;  height: 25px; padding:0; background:#ddd;}
+#controlbar li {display:inline;}
+#controlbar a {width:25px; float:left;}
+#controlbar img {border:none;}
+#controlbar .tile {float:left;}
+
+.horizontalborder {border-top:solid 2px #000; width:25px; height:23px;}
+.verticalborder {border-left:solid 2px #000; width:23px; height:25px;}
